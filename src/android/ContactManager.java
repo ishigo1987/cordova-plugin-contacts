@@ -130,7 +130,7 @@ public class ContactManager extends CordovaPlugin {
             }
         }
         else if (action.equals("save")) {
-            if(PermissionHelper.hasPermission(this, WRITE))
+            if(PermissionHelper.hasPermission(this, WRITE) && PermissionHelper.hasPermission(this, READ))
             {
                 save(executeArgs);
             }
@@ -140,7 +140,7 @@ public class ContactManager extends CordovaPlugin {
             }
         }
         else if (action.equals("remove")) {
-            if(PermissionHelper.hasPermission(this, WRITE))
+            if(PermissionHelper.hasPermission(this, WRITE) && PermissionHelper.hasPermission(this, READ))
             {
                 remove(executeArgs);
             }
